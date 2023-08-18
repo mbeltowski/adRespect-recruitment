@@ -1,0 +1,17 @@
+{
+	"name": "adrespect",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "live-server --port=8080 --entry-file=index.html npx postcss styles/tailwind.css -o styles/style.css --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"autoprefixer": "^10.4.15",
+		"live-server": "^1.2.2",
+		"postcss-cli": "^10.1.0",
+		"tailwindcss": "^3.3.3"
+	}
+}
