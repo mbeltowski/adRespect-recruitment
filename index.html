@@ -5,12 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="script/index.js" defer></script>
 		<title>giardesign</title>
-		<link rel="stylesheet" href="styles/style.css" />
+
+		<link rel="stylesheet" href="styles/output.css" />
 	</head>
-	<body class="w-screen h-screen">
-		<header class="flex flex-row items-center justify-between pl-20 pr-20 w-screen h-24 border">
+	<body class="overflow-x-hidden">
+		<!-- <div class="w-screen"> -->
+		<!-- <header class="sticky top-0 left-0 z-10 bg-white flex flex-row items-center justify-between pl-20 pr-20 w-screen h-24 border-2 shadow-sm nav"> -->
+		<header class="z-10 bg-white flex flex-row items-center justify-between pl-20 pr-20 w-screen h-24 border-2 shadow-sm nav">
+			<!-- <header class="vw-100"> -->
 			<h3><span class="font-bold">giard</span>design</h3>
-			<nav>
+			<nav class="">
 				<ul class="font-inter flex flex-row items-center justify-center list-none gap-6 font-">
 					<li>Oferta v</li>
 					<li>O firmie</li>
@@ -20,24 +24,80 @@
 				</ul>
 			</nav>
 		</header>
-		<main class="">
-			<section class="flex flex-row items-center justify-between">
-				<div class="left w-1/2 flex flex-col items-center justify-center bg-[#DCC1AB] h-screen p-16 font-medium gap-8">
-					<div class="flex flex-col gap-8 w-4/5 font-monteserat">
-						<h1 class="text-6xl">Nowoczesna aranżacja Twojego ogrodu</h1>
-						<h4>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres usługz indywidualnym podejściem do każdego projektu.</h4>
-					</div>
+		<!-- </div> -->
 
-					<div class="flex flex-row gap-8">
-						<button class="border-green-800 rounded-full bg-green-800 text-white p-4 text-center">Skontaktuj się z nami</button>
-						<button class="border-green-800 border-solid border-4 border-x border-y rounded-full text-black p-4 text-center">Zobacz nasze realizacje v</button>
+		<!-- <section class="flex w-full h-[calc(100vh-5.5rem)]"> -->
+		<section class="flex w-full h-screen">
+			<div class="left flex flex-col items-center justify-center bg-[#DCC1AB] font-medium flex-1 gap-10">
+				<div class="flex flex-col gap-8 font-monteserat">
+					<h1 class="text-6xl">
+						Nowoczesna<br />
+						aranżacja <br />Twojego ogrodu
+					</h1>
+					<h4>
+						Marka GiardDesign to wieloletnie doświadczenie i wysoka <br />
+						estetyka realizacji. Oferujemy kompleksowy zakres usług <br />
+						z indywidualnym podejściem do każdego projektu.
+					</h4>
+				</div>
+
+				<div class="flex flex-row gap-8">
+					<button class="border-green-800 rounded-full bg-green-800 text-white p-4 text-center">Skontaktuj się z nami</button>
+					<button class="border-green-800 border-solid border-4 border-x border-y rounded-full text-green-800 p-4 text-center">Zobacz nasze realizacje v</button>
+				</div>
+			</div>
+			<div class="right bg-purple-400 flex-1">
+				<img src="files/maze.png" alt="maze" class="h-full w-full" />
+			</div>
+		</section>
+
+		<!-- <section class="flex w-full h-[calc(100vh-5.5rem)] bg-[#F5F0EC] flex-col"> -->
+		<section class="flex w-full h-screen bg-[#F5F0EC] flex-col">
+			<div class="offer w-full">
+				<div class="offer-header flex flex-col items-start justify-center gap-6 w-4/5 p-28 pl-[200px] pb-12">
+					<p class="text-sm">Oferta</p>
+					<p class="text-2xl font-bold">Działamy <span class="italic font-bold">kompleksowo</span></p>
+					<p class="text-lg text-justify">
+						Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie posłużymy radą i
+						wieloletnim doświadczeniem.
+					</p>
+				</div>
+				<div class="offer-cards w-screen flex flex-row justify-evenly items-center pl-12 pr-12 gap-6">
+					<div class="offer-card w-[378px] h-[370px] flex flex-col items-center justify-around gap-6 bg-white rounded">
+						<div class="card-icon">icona</div>
+						<div class="card-header">Projekty</div>
+						<div class="card-description text-sm">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</div>
+						<div class="card-show-more">Dowiedz się więcej</div>
+					</div>
+					<div class="offer-card">
+						<div class="card-icon">icona</div>
+						<div class="card-header">Wizualizacje</div>
+						<div class="card-description">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</div>
+						<div class="card-show-more">Dowiedz się więcej</div>
+					</div>
+					<div class="offer-card">
+						<div class="card-icon">icona</div>
+						<div class="card-header">Realizacje</div>
+						<div class="card-description">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</div>
+						<div class="card-show-more">Zobacz nasze realizacje</div>
 					</div>
 				</div>
-				<div class="right w-1/2 bg-purple-400 h-screen">
-					<h1>hej</h1>
+			</div>
+		</section>
+
+		<!-- <footer class="flex w-full h-[calc(100vh-5.5rem)]"> -->
+		<footer class="flex w-full h-screen">
+			<div class="banner"></div>
+			<div class="footer-content">
+				<div class="footer-header">
+					<h3><span class="font-bold">giard</span>design</h3>
+					<p>Daj znać, co możemy dla Ciebie zrobić!</p>
+					<button class="border-green-800 rounded-full bg-green-800 text-white p-4 text-center">Skontaktuj się z nami</button>
 				</div>
-			</section>
-		</main>
-		<footer></footer>
+				<hr />
+				<div class="footer-credits"></div>
+				<div class="footer-ending"></div>
+			</div>
+		</footer>
 	</body>
 </html>

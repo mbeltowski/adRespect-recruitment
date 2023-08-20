@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "live-server --port=8080 --entry-file=index.html npx postcss styles/tailwind.css -o styles/style.css --watch"
+		"start": "live-server --port=8080 --entry-file=index.html && npx tailwindcss -i ./styles/style.css -o ./styles/output.css --watch"
 	},
 	"author": "",
 	"license": "ISC",
