@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="script/index.js" defer></script>
 		<title>giardesign</title>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 		<link rel="stylesheet" href="styles/output.css" />
 	</head>
 	<body class="overflow-x-hidden">
-		<!-- <div class="w-screen"> -->
-		<!-- <header class="sticky top-0 left-0 z-10 bg-white flex flex-row items-center justify-between pl-20 pr-20 w-screen h-24 border-2 shadow-sm nav"> -->
-		<header class="z-10 bg-white flex flex-row items-center justify-between pl-20 pr-20 w-screen h-24 border-2 shadow-sm nav">
-			<!-- <header class="vw-100"> -->
-			<h3><span class="font-bold">giard</span>design</h3>
+		<header class="z-10 bg-white flex flex-row items-center justify-between pl-5 md:pl-20 pr-5 md:pr-20 w-screen h-24 border-2 shadow-sm nav">
+			<h3 class="cursor-pointer transition-all ease-in-out hover:scale-110"><span class="font-bold">giard</span>design</h3>
 			<nav class="">
-				<ul class="font-inter flex flex-row items-center justify-center list-none gap-6 font-">
-					<li>Oferta v</li>
-					<li>O firmie</li>
-					<li>Realizacje</li>
-					<li>Kontakt</li>
-					<li>O</li>
-				</ul>
+				<input type="checkbox" id="menu-toggle" class="hidden" />
+				<label for="menu-toggle" class="cursor-pointer block md:hidden lg:hidden">
+					<svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+					</svg>
+				</label>
+				<div class="hidden md:block lg:block absolute md:static lg:static top-24 right-0 md:inset-0 lg:inset-0 bg-white border-2 md:border-none lg:border-none md:gap-12 shadow-sm w-screen md:w-auto md:mt-0" id="menu">
+					<ul class="flex flex-col md:flex-row lg:flex-row items-center justify-center list-none gap-6 px-4 py-2">
+						<li>
+							<a href="#intro" class="cursor-pointer border-anim">Oferta</a>
+						</li>
+						<li>
+							<a href="#about" class="cursor-pointer">O firmie</a>
+						</li>
+						<li>
+							<a href="#" class="cursor-pointer">Realizacje</a>
+						</li>
+						<li>
+							<a href="#contact" class="cursor-pointer">Kontakt</a>
+						</li>
+						<li>
+							<img src="files/search.png" width="20px" height="20px" alt="Search" />
+						</li>
+					</ul>
+				</div>
 			</nav>
 		</header>
-		<!-- </div> -->
 
 		<!-- <section class="flex w-full h-[calc(100vh-5.5rem)]"> -->
-		<section class="flex w-full h-screen">
-			<div class="left flex flex-col items-center justify-center bg-[#DCC1AB] font-medium flex-1 gap-10">
-				<div class="flex flex-col gap-8 font-monteserat">
-					<h1 class="text-6xl">
+		<section class="md:flex w-full h-screen" id="intro">
+			<div class="left w-screen h-1/2 md:w-1/2 md:h-full flex flex-col items-center justify-center bg-[#DCC1AB] font-medium flex-1 gap-10">
+				<div class="flex flex-col gap-8 font-monteserat md:p-8">
+					<h1 class="text-3xl">
 						Nowoczesna<br />
 						aranżacja <br />Twojego ogrodu
 					</h1>
@@ -42,19 +56,20 @@
 				</div>
 
 				<div class="flex flex-row gap-8">
-					<button class="border-green-800 rounded-full bg-green-800 text-white p-4 text-center">Skontaktuj się z nami</button>
+					<button class="border-green-800 rounded-full bg-green-800 text-white p-4 text-center"><a href="#contact">Skontaktuj się z nami</a></button>
 					<button class="border-green-800 border-solid border-4 border-x border-y rounded-full text-green-800 p-4 text-center">Zobacz nasze realizacje v</button>
 				</div>
 			</div>
-			<div class="right bg-purple-400 flex-1">
-				<img src="files/maze.png" alt="maze" class="h-full w-full" />
+			<div class="right bg-purple-400 flex-1 w-screen h-1/2 md:w-1/2 md:h-full">
+				<img src="files/maze.png" alt="maze" class="h-full w-full object-cover" />
 			</div>
 		</section>
 
 		<!-- <section class="flex w-full h-[calc(100vh-5.5rem)] bg-[#F5F0EC] flex-col"> -->
-		<section class="flex w-full h-screen bg-[#F5F0EC] flex-col">
+		<section class="flex w-full h-[230vh] md:h-[150vh] bg-[#F5F0EC] flex-col" id="offer">
 			<div class="offer w-full">
-				<div class="offer-header flex flex-col items-start justify-center gap-6 w-4/5 p-28 pl-[200px] pb-12">
+				<!-- <div class="offer-header flex flex-col lg:items-start lg:justify-center lg:gap-6 lg:w-4/5 lg:p-28 lg:pl-[200px] lg:pb-12"> -->
+				<div class="offer-header flex flex-col p-12 pb-0 lg:items-start lg:justify-center lg:gap-6 lg:w-4/5 lg:p-28 lg:pl-[200px] lg:pb-12">
 					<p class="text-sm">Oferta</p>
 					<p class="text-2xl font-bold">Działamy <span class="italic font-bold">kompleksowo</span></p>
 					<p class="text-lg text-justify">
@@ -62,42 +77,126 @@
 						wieloletnim doświadczeniem.
 					</p>
 				</div>
-				<div class="offer-cards w-screen flex flex-row justify-evenly items-center pl-12 pr-12 gap-6">
-					<div class="offer-card w-[378px] h-[370px] flex flex-col items-center justify-around gap-6 bg-white rounded">
-						<div class="card-icon">icona</div>
-						<div class="card-header">Projekty</div>
-						<div class="card-description text-sm">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</div>
-						<div class="card-show-more">Dowiedz się więcej</div>
+
+				<div class="offer-cards w-screen flex lg:flex-row lg:justify-evenly items-center pl-12 pr-12 gap-6 mt-24 flex-col sm:flex-col">
+					<div class="offer-card w-[378px] h-[370px] flex flex-col items-start justify-around gap-6 bg-white rounded-3xl p-12">
+						<img src="files/projects.png" alt="" />
+						<div class="card-header text-2xl">Projekty</div>
+						<div class="card-description text-sm">
+							Zaprojektujemy Twój ogród w nowoczesnym <br />
+							stylu i z najlepszym wykorzystaniem <br />
+							istniejącej przestrzeni.
+						</div>
+						<div class="card-show-more-container flex flex-row items-center justify-center gap-4 text-[#1B5B31] border-b-green-800 border-b-2">
+							<div class="card-show-more">Dowiedz się więcej</div>
+							<img src="files/arrow-to-right.png" alt="" />
+						</div>
 					</div>
-					<div class="offer-card">
-						<div class="card-icon">icona</div>
-						<div class="card-header">Wizualizacje</div>
-						<div class="card-description">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</div>
-						<div class="card-show-more">Dowiedz się więcej</div>
+					<div class="offer-card w-[378px] h-[370px] flex flex-col items-start justify-around gap-6 bg-white rounded-3xl p-12">
+						<img src="files/visualisation.png" alt="" />
+
+						<div class="card-header text-2xl">Wizualizacje</div>
+						<div class="card-description text-sm">
+							Przedstawimy Ci projekty koncepcyjne <br />
+							w postaci wirtualnego spaceru animowanego <br />
+							w technologii 3D.
+						</div>
+						<div class="card-show-more-container flex flex-row items-center justify-center gap-4 text-[#1B5B31] border-b-green-800 border-b-2">
+							<div class="card-show-more">Dowiedz się więcej</div>
+							<img src="files/arrow-to-right.png" alt="" />
+						</div>
 					</div>
-					<div class="offer-card">
-						<div class="card-icon">icona</div>
-						<div class="card-header">Realizacje</div>
-						<div class="card-description">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</div>
-						<div class="card-show-more">Zobacz nasze realizacje</div>
+					<div class="offer-card w-[378px] h-[370px] flex flex-col items-start justify-around gap-6 bg-white rounded-3xl p-12">
+						<img src="files/realisations.png" alt="" />
+						<div class="card-header text-2xl">Realizacje</div>
+						<div class="card-description text-sm">
+							Zrealizujemy Twoje marzenie przy użyciu <br />
+							najnowszych rozwiązań i zaawansowanych <br />
+							technologii.
+						</div>
+						<div class="card-show-more-container flex flex-row items-center justify-center gap-4 text-[#1B5B31] border-b-green-800 border-b-2">
+							<div class="card-show-more">Zobacz nasze realizacje!</div>
+							<img src="files/arrow-to-right.png" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<!-- <footer class="flex w-full h-[calc(100vh-5.5rem)]"> -->
-		<footer class="flex w-full h-screen">
-			<div class="banner"></div>
-			<div class="footer-content">
-				<div class="footer-header">
-					<h3><span class="font-bold">giard</span>design</h3>
-					<p>Daj znać, co możemy dla Ciebie zrobić!</p>
-					<button class="border-green-800 rounded-full bg-green-800 text-white p-4 text-center">Skontaktuj się z nami</button>
+		<section class="flex w-full h-screen" id="about">
+			<div class="right bg-purple-400 flex-1">
+				<img src="files/photo-home.png" alt="maze" class="h-full w-full" />
+			</div>
+			<div class="left flex flex-col items-center justify-center text-white bg-[#1B5B31] font-medium flex-1 gap-10">
+				<div class="flex flex-col gap-6 font-monteserat w-[70%]">
+					<p class="font-thin text-xs">O firmie</p>
+					<h1 class="text-6xl">
+						Tworzymy<br />
+						z<span class="italic"> pasją</span> <br />
+					</h1>
+					<h4 class="text-lg font-thin">
+						Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza <br />
+						specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.
+					</h4>
+					<button class="border-white border-solid border-4 border-x border-y rounded-full text-white px-4 py-2 text-center self-start">Poznaj nas bliżej ></button>
 				</div>
-				<hr />
-				<div class="footer-credits"></div>
-				<div class="footer-ending"></div>
+			</div>
+		</section>
+		<section class="flex w-full h-screen flex-col items-center bg-[#DCC1AB]" id="projects">
+			<div class="header w-full h-1/4 flex flex-col justify-center items-start pl-32">
+				<p class="text-xs">Realizacje</p>
+				<p class="text-3xl font-semibold">Nasze <span class="italic">projekty</span></p>
+			</div>
+			<div class="images-container h-4/5 overflow-hidden"></div>
+		</section>
+		<!-- <footer class="flex w-full h-[calc(100vh-5.5rem)]"> -->
+		<footer class="flex flex-col w-full h-[150vh]">
+			<div class="banner h-[60%] flex items-center justify-center" id="contact">
+				<div class="w-[80%] bg-[#1B5B31] h-4/5 flex flex-row items-center justify-center gap-12">
+					<div class="text-white text-4xl">
+						Zostańmy w kontakcie! <br />
+						Znajdziesz nas na <span class="italic font-bold">Instagramie.</span>
+					</div>
+					<div class="flex flex-col gap-6">
+						<p class="text-white">
+							Śledź nasze <br />
+							najnowsze realizacje!
+						</p>
+						<button class="border-green-800 rounded-full bg-white text-black py-2 px-1 text-center">
+							<a href="https://instagram.com" target="_blank">Instagram</a>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer-content h-[40%] bg-black flex flex-col items-center justify-center">
+				<div class="w-[70%] text-white flex flex-col items-center justify-center">
+					<div class="footer-header w-full flex items-center justify-between pt-12">
+						<h3><span class="font-bold">giard</span>design</h3>
+						<div class="flex items-center gap-4">
+							<p>Daj znać, co możemy dla Ciebie zrobić!</p>
+							<button class="border-green-800 rounded-full bg-green-800 text-white px-4 py-2 text-center">Skontaktuj się z nami</button>
+						</div>
+					</div>
+					<hr class="w-full my-8" />
+					<div class="footer-credits w-full flex flex-row items-center justify-between">
+						<div class="flex text-xs gap-4">
+							<p>Kontakt</p>
+							<p>Instagram</p>
+							<p>Facebook</p>
+							<p>LinkedIn</p>
+						</div>
+						<div class="flex text-xs gap-4">
+							<p>000-000-000</p>
+							<p>giarddesign@kontakt.pl</p>
+						</div>
+					</div>
+					<div class="footer-ending w-full mt-16 flex justify-between text-xs">
+						<p>Prawa zastrzeżone © 2022</p>
+						<p>Made my AdRespect</p>
+					</div>
+				</div>
 			</div>
 		</footer>
+
+		<script src="./script/index.js" type="module"></script>
 	</body>
 </html>

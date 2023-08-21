@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.border-anim:after {
+	display: block;
+	content: "";
+	border-bottom: solid 2px #019fb6;
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+
+.border-anim:hover:after {
+	transform: scaleX(1);
+}
